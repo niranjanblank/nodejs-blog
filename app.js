@@ -9,9 +9,9 @@ const blogRoutes = require('./routes/blogRoutes')
 const app = express()
 
 //connect to mongodb
-const dbURI = 'mongodb+srv://niranjanblank:foolsworld@cluster0.mhgfq.mongodb.net/blog_db?retryWrites=true&w=majority'
+const dbURI = 'mongodb+srv://<username>:<password>@cluster0.mhgfq.mongodb.net/<database_name>?retryWrites=true&w=majority'
 const localURI='mongodb://localhost:27017/blogdatabase'
-mongooge.connect(dbURI, {useNewUrlParser:true, useUnifiedTopology: true})
+mongooge.connect(localURI, {useNewUrlParser:true, useUnifiedTopology: true})
 .then((result)=>{
     console.log('connected to db')
     //listen for requests
